@@ -16,7 +16,8 @@ RUN apt-get update &&  \
     tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 && \
     rm "node-v$NODE_VERSION-linux-x64.tar.gz" 
 RUN    npm install -g npm@"$NPM_VERSION" 
-RUN     npm install -g cordova@"$CORDOVA_VERSION" ionic@"$IONIC_VERSION" 
+RUN     npm install -g cordova@"$CORDOVA_VERSION"
+RUN     npm install -g ionic@"$IONIC_VERSION" 
 RUN    npm cache clear && \
 
     gem install sass && \

@@ -17,7 +17,7 @@ RUN apt-get update &&  \
     rm "node-v$NODE_VERSION-linux-x64.tar.gz" 
 RUN    npm install -g npm@"$NPM_VERSION" 
 RUN     npm install -g cordova@"$CORDOVA_VERSION" ionic@"$IONIC_VERSION" 
-    npm cache clear && \
+RUN    npm cache clear && \
 
     gem install sass && \
 

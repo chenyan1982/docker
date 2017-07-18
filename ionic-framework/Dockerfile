@@ -21,7 +21,7 @@ RUN apt-get update &&  \
 
     gem install sass && \
 
-    ionic start myApp sidemenu && \
+    ionic start myApp sidemenu
 
 
 
@@ -29,24 +29,24 @@ RUN apt-get update &&  \
 #JAVA
 
 # install python-software-properties (so you can do add-apt-repository)
-    apt-get update && apt-get install -y -q python-software-properties software-properties-common  && \
+RUN    apt-get update && apt-get install -y -q python-software-properties software-properties-common  && \
 
     add-apt-repository ppa:webupd8team/java -y && \
     echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
-    apt-get update && apt-get -y install oracle-java8-installer && \
+    apt-get update && apt-get -y install oracle-java8-installer
 
 
 #ANDROID STUFF
-    echo ANDROID_HOME="${ANDROID_HOME}" >> /etc/environment && \
+RUN    echo ANDROID_HOME="${ANDROID_HOME}" >> /etc/environment && \
     dpkg --add-architecture i386 && \
     apt-get update && \
     apt-get install -y --force-yes expect ant wget libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1 qemu-kvm kmod && \
     apt-get clean && \
     apt-get autoclean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
 # Install Android SDK
-    cd /opt && \
+RUN    cd /opt && \
     wget --output-document=android-sdk.tgz --quiet http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz && \
     tar xzf android-sdk.tgz && \
     rm -f android-sdk.tgz && \

@@ -3,10 +3,10 @@ MAINTAINER bitard [dot] michael [at] gmail [dot] com
 
 ENV DEBIAN_FRONTEND=noninteractive \
     ANDROID_HOME=/opt/android-sdk-linux \
-    NODE_VERSION=6.10.0 \
-    NPM_VERSION=3.10.10 \
-    IONIC_VERSION=2.2.1 \
-    CORDOVA_VERSION=6.5.0
+    NODE_VERSION=8.1.3 \
+    NPM_VERSION=5.0.3 \
+    IONIC_VERSION=3.5.0 \
+    CORDOVA_VERSION=7.0.1
 
 # Install basics
 RUN apt-get update &&  \

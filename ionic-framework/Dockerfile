@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     
 # Install basics
 RUN apt-get update &&  \
-    apt-get install -y git wget curl unzip ruby make && \
+    apt-get install -y git wget curl unzip ruby2.1-dev make && \
 
     curl --retry 3 -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" && \
     tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 && \

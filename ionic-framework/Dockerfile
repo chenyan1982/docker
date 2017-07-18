@@ -14,10 +14,10 @@ RUN apt-get update &&  \
 
     curl --retry 3 -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" && \
     tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 && \
-    rm "node-v$NODE_VERSION-linux-x64.tar.gz"
-RUN npm install -g npm@"$NPM_VERSION"
-RUN npm install -g cordova@"$CORDOVA_VERSION" ionic@"$IONIC_VERSION" 
-RUN npm cache clear && \
+    rm "node-v$NODE_VERSION-linux-x64.tar.gz" && \
+    npm install -g npm@"$NPM_VERSION" && \
+    npm install -g cordova@"$CORDOVA_VERSION" ionic@"$IONIC_VERSION" && \
+    npm cache clear && \
 
     gem install sass && \
 

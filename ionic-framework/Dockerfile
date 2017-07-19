@@ -19,6 +19,9 @@ RUN apt-get update &&  \
     npm install -g cordova@"$CORDOVA_VERSION" ionic@"$IONIC_VERSION" && \
     npm cache clear --force && \
     gem install sass -v 3.4.25 && \
+    
+    git config --global user.email "564196013@qq.com" && \
+    git config --global user.name "chenyan1982" && \
 
     ionic start myApp sidemenu
 

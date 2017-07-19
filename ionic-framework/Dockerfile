@@ -18,7 +18,7 @@ RUN apt-get update &&  \
     npm install -g npm@"$NPM_VERSION" && \
     npm install -g cordova@"$CORDOVA_VERSION" ionic@"$IONIC_VERSION" && \
     npm cache clear --force && \
-    gem install sass && \
+    gem2.0 install sass && \
 
     ionic start myApp sidemenu
 

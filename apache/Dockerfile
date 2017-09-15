@@ -10,6 +10,8 @@ ENV APACHE_LOG_DIR /var/log/apache2
 RUN /usr/sbin/a2ensite default-ssl
 RUN /usr/sbin/a2enmod ssl
 
+RUN chmod 777 /var/www/html
+
 EXPOSE 80
 EXPOSE 443
 
